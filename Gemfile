@@ -1,7 +1,6 @@
 source 'https://gems.ruby-china.com/'
 
 ruby '2.5.0'
-
 gem 'rails', '~> 5.2.0'
 gem 'sass-rails', '~> 5.0'
 gem 'coffee-rails', '~> 4.2'
@@ -54,6 +53,12 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   gem 'rack-cors', :require => 'rack/cors'
+end
+
+gem 'unicorn'
+
+group :production do
+  gem 'unicorn-worker-killer'
 end
 
 group :test do
