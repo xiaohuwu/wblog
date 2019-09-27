@@ -19,7 +19,6 @@ gem 'js_cookie_rails'
 gem 'rails-i18n', '~> 5.1'
 gem 'mysql2'
 gem 'jbuilder'
-gem 'pg', '~> 0.18'
 
 gem 'redcarpet'
 gem 'rouge'

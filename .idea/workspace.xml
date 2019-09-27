@@ -36,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+            <state>
+              <caret line="14" column="55" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -112,8 +112,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="67" />
-    <option name="y" value="80" />
+    <option name="x" value="-93" />
+    <option name="y" value="214" />
     <option name="width" value="1618" />
     <option name="height" value="852" />
   </component>
@@ -290,15 +290,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569592703208</updated>
-      <workItem from="1569592705391" duration="11732000" />
+      <workItem from="1569592705391" duration="11984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11732000" />
+    <option name="totallyTimeSpent" value="11984000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="80" width="1618" height="852" extended-state="0" />
+    <frame x="-93" y="214" width="1618" height="852" extended-state="0" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29251269" />
@@ -307,7 +307,7 @@
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Messages" weight="0.5394582" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.68421054" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.55789477" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32979977" />
@@ -473,8 +473,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+        <state>
+          <caret line="14" column="55" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="55" />
         </state>
       </provider>
     </entry>
