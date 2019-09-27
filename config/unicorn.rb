@@ -13,8 +13,8 @@ worker_processes 2
 working_directory APP_HOME # available in 0.94.0+
 
 if 'production' == ENV['RAILS_ENV']
-  listen "/data/www/wblog/tmp/sockets/unicorn.sock", :backlog => 64
-  pid "/data/www/wblog/tmp/pids/unicorn.pid"
+  listen "/data/www/wblog/shared/tmp/sockets/unicorn.sock", :backlog => 64
+  pid "/data/www/wblog/shared/tmp/pids/unicorn.pid"
 else
   listen 3006, :tcp_nopush => true
   pid "#{APP_HOME}/tmp/pids/unicorn.pid"
@@ -37,7 +37,7 @@ before_fork do |server, worker|
   defined?(ActiveRecord::Base) and
     ActiveRecord::Base.connection.disconnect!
 
-  old_pid = "#{APP_HOME}/tmp/pids/unicorn.pid.oldbin"
+  old_pid = "#{APP_HOME}/shared/tmp/pids/unicorn.pid.oldbin"
   if File.exists?(old_pid) && server.pid != old_pid
     begin
       Process.kill("QUIT", File.read(old_pid).to_i)
