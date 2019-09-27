@@ -62,6 +62,10 @@ task :deploy do
         command %{mkdir -p tmp/}
         command %{touch tmp/restart.txt}
       end
+      on :launch do
+        invoke :'sidekiq:restart'
+        invoke :'unicorn:restart'
+      end
     end
   end
 

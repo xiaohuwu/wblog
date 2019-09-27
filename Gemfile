@@ -40,6 +40,7 @@ gem 'mina-ng-puma', '~> 1.3.0', require: false
 gem 'mina-multistage', '~> 1.0.3', require: false
 gem 'mina-sidekiq', '~> 1.0.3', require: false
 gem 'mina-logs', '~> 1.1.0', require: false
+gem 'mina-unicorn', :require => false
 
 gem 'browser_warrior'
 
