@@ -11,6 +11,7 @@ APP_HOME = Rails.root
 worker_processes 2
 
 working_directory APP_HOME # available in 0.94.0+
+logger.info "[app]:#{APP_HOME}"
 
 if 'production' == ENV['RAILS_ENV']
   listen "/data/www/wblog/shared/tmp/sockets/unicorn.sock", :backlog => 64
