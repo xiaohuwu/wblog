@@ -1,6 +1,6 @@
-source 'https://rubygems.org'
+source 'https://gems.ruby-china.com/'
 
-ruby '2.5.3'
+ruby '2.5.0'
 
 gem 'rails', '~> 5.2.0'
 gem 'sass-rails', '~> 5.0'
@@ -17,7 +17,7 @@ gem 'turbolinks', '~> 5.x'
 gem 'js_cookie_rails'
 
 gem 'rails-i18n', '~> 5.1'
-
+gem 'mysql2'
 gem 'jbuilder'
 gem 'pg', '~> 0.18'
 
