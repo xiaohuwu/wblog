@@ -8,8 +8,6 @@ end
 
 APP_HOME = Rails.root
 
-
-
 worker_processes 2
 
 working_directory APP_HOME # available in 0.94.0+
