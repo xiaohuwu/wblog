@@ -97,9 +97,10 @@ namespace :unicorn do
   desc "Restart unicorn"
   task :restart => :environment do
     invoke 'unicorn:stop'
-    invoke 'unicorn:start'
+    #invoke 'unicorn:start'
   end
 end
+
 
 # For help in making your deploy script, see the Mina documentation:
 #
