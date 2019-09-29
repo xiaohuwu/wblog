@@ -74,6 +74,7 @@ task :deploy do
   # run(:local){ say 'done' }
 end
 
+=begin
 namespace :unicorn do
   set :unicorn_pid, "/data/www/wblog/tmp/pids/unicorn.pid"
 
@@ -100,6 +101,7 @@ namespace :unicorn do
     invoke 'unicorn:start'
   end
 end
+=end
 
 
 # For help in making your deploy script, see the Mina documentation:

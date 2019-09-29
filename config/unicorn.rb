@@ -1,34 +1,55 @@
-app_path = File.expand_path( File.join(File.dirname(__FILE__), '..', '..'))
-puts "app_path: #{app_path}"
-worker_processes   1
-timeout            180
-listen             "/data/www/wblog/tmp/sockets/unicorn.sock"
-pid                "/data/www/wblog/tmp/pids/unicorn.pid"
-stderr_path        "/data/www/wblog/shared/log/unicorn.log"
-stdout_path        "/data/www/wblog/shared/log/unicorn.log"
+module Rails
+  class << self
+    def root
+      File.expand_path("../..", __FILE__)
+    end
+  end
+end
+
+APP_HOME = Rails.root
+puts "APP_HOME: #{APP_HOME}"
+worker_processes 2
+
+working_directory APP_HOME # available in 0.94.0+
+
+if 'production' == ENV['RAILS_ENV']
+  listen "#{APP_HOME}/tmp/sockets/unicorn.sock", :backlog => 64
+  pid "#{APP_HOME}/tmp/pids/unicorn.pid"
+else
+  listen 3006, :tcp_nopush => true
+  pid "#{APP_HOME}/tmp/pids/unicorn.pid"
+end
+
+timeout 60
+
+stderr_path "#{APP_HOME}/log/unicorn.stderr.log"
+stdout_path "#{APP_HOME}/log/unicorn.stdout.log"
+
+preload_app true
+
+if GC.respond_to?(:copy_on_write_friendly=)
+  GC.copy_on_write_friendly = true
+end
+
+check_client_connection false
 
 before_fork do |server, worker|
-  if defined?(ActiveRecord::Base)
+  defined?(ActiveRecord::Base) and
     ActiveRecord::Base.connection.disconnect!
-  end
 
-  old_pid = "#{server.config[:pid]}.oldbin"
+  old_pid = "#{APP_HOME}/tmp/pids/unicorn.pid.oldbin"
   if File.exists?(old_pid) && server.pid != old_pid
     begin
+      puts "old_pid: #{old_pid}"
       Process.kill("QUIT", File.read(old_pid).to_i)
     rescue Errno::ENOENT, Errno::ESRCH
-      # someone else did our job for us
+      puts "Send 'QUIT' signal to unicorn error!"
     end
   end
 end
 
 after_fork do |server, worker|
-  if defined?(ActiveRecord::Base)
+  defined?(ActiveRecord::Base) and
     ActiveRecord::Base.establish_connection
-  end
-end
-
-before_exec do |server| # fix hot restart Gemfile
-  ENV["BUNDLE_GEMFILE"] = "#{app_path}/Gemfile"
 end
 
