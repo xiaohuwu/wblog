@@ -17,7 +17,7 @@ zh-CN:
       next: '下一页'
 
   home:
-    no_blog_here: '这里没有博客123这里没有博客123'
+    no_blog_here: '这里没有博客'
     read: '阅读全文 >>'
     created_at: '发表于 '
     recent: '近期博客'
