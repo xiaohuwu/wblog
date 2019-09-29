@@ -96,7 +96,7 @@ namespace :unicorn do
 
   desc "Restart unicorn"
   task :restart => :environment do
-    #invoke 'unicorn:stop'
+    invoke 'unicorn:stop'
     invoke 'unicorn:start'
   end
 end
