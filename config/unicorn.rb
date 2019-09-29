@@ -6,7 +6,7 @@ module Rails
   end
 end
 
-APP_HOME = '/data/www/wblog/shared' #Rails.root
+APP_HOME = '/data/www/wblog' #Rails.root
 puts "APP_HOME: #{APP_HOME}"
 worker_processes 2
 
