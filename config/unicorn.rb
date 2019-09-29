@@ -1,3 +1,5 @@
+=begin
+
 module Rails
   class << self
     def root
@@ -53,3 +55,4 @@ after_fork do |server, worker|
     ActiveRecord::Base.establish_connection
 end
 
+=end
