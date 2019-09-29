@@ -7,7 +7,7 @@ module Rails
 end
 
 APP_HOME = '/data/www/wblog/shared'
-puts "APP_HOME: #{APP_HOME}"
+puts "APP_HOME123: #{APP_HOME}"
 worker_processes 2
 
 working_directory APP_HOME # available in 0.94.0+
