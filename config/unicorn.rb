@@ -38,6 +38,7 @@ before_fork do |server, worker|
     ActiveRecord::Base.connection.disconnect!
 
   old_pid = "#{APP_HOME}/tmp/pids/unicorn.pid.oldbin"
+  puts "old_pid: #{old_pid} server.pid: #{server.pid} "
   if File.exists?(old_pid) && server.pid != old_pid
     begin
       puts "old_pid: #{old_pid}"
