@@ -10,7 +10,7 @@ APP_HOME = "/data/www/wblog" #'/data/www/wblog/shared'  #Rails.root 第一次执
 puts "APP_HOME123: #{APP_HOME}"
 worker_processes 2
 
-working_directory APP_HOME # available in 0.94.0+
+working_directory '/data/www/wblog/current' # available in 0.94.0+
 
 if 'production' == ENV['RAILS_ENV']
   listen "#{APP_HOME}/tmp/sockets/unicorn.sock", :backlog => 64
