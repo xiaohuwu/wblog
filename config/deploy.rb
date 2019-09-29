@@ -1,7 +1,6 @@
 require 'mina/rails'
 require 'mina/git'
 require 'mina_sidekiq/tasks'
-require 'mina/unicorn'
 # require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
 require 'mina/rvm'    # for rvm support. (https://rvm.io)
 
@@ -71,9 +70,35 @@ task :deploy do
       end
     end
   end
-
   # you can use `run :local` to run tasks on local machine before of after the deploy scripts
   # run(:local){ say 'done' }
+end
+
+namespace :unicorn do
+  set :unicorn_pid, "/data/www/wblog/tmp/pids/unicorn.pid"
+
+  desc "Start Unicorn"
+  task :start => :environment do
+    queue 'echo "-----> Start Unicorn"'
+    queue! %{
+      cd /data/www/wblog/#{fetch(:current_path)} && bundle exec unicorn_rails -c config/unicorn.rb -E production -D
+    }
+  end
+
+  desc "Stop Unicorn"
+  task :stop do
+    queue 'echo "-----> Stop Unicorn"'
+    queue! %{
+      kill -QUIT `cat "#{unicorn_pid}"` && rm -rf "#{unicorn_pid}" && echo "Stop Ok" && exit 0
+      echo >&2 "Not running"
+    }
+  end
+
+  desc "Restart unicorn"
+  task :restart => :environment do
+    invoke 'unicorn:stop'
+    invoke 'unicorn:start'
+  end
 end
 
 # For help in making your deploy script, see the Mina documentation:
