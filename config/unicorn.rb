@@ -6,7 +6,7 @@ module Rails
   end
 end
 
-APP_HOME = "/data/www/wblog/shared" #'/data/www/wblog/shared'  #Rails.root 第一次执行用它
+APP_HOME = "/data/www/wblog" #'/data/www/wblog/shared'  #Rails.root 第一次执行用它
 puts "APP_HOME123: #{APP_HOME}"
 worker_processes 2
 
