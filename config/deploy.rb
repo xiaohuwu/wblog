@@ -1,6 +1,7 @@
 require 'mina/rails'
 require 'mina/git'
 require 'mina_sidekiq/tasks'
+require 'mina/unicorn'
 # require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
 require 'mina/rvm'    # for rvm support. (https://rvm.io)
 
