@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63157063-5a64-40e6-ae61-7efe89ac3db8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/deploy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/deploy.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/unicorn.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/unicorn.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -24,8 +23,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="342">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.5.0/gems/mina-1.2.3/lib/mina/application.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -36,10 +44,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+            <state relative-caret-position="256">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -133,8 +150,8 @@
         <option value="$PROJECT_DIR$/config/application.yml" />
         <option value="$PROJECT_DIR$/commit.sh" />
         <option value="$PROJECT_DIR$/config/database.yml" />
-        <option value="$PROJECT_DIR$/config/unicorn.rb" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
+        <option value="$PROJECT_DIR$/config/unicorn.rb" />
       </list>
     </option>
   </component>
@@ -162,6 +179,11 @@
               <item name="wblog" type="b2602c69:ProjectViewProjectNode" />
               <item name="wblog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wblog" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -345,7 +367,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46150000" />
+    <option name="totallyTimeSpent" value="46428000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -357,7 +379,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="34" y="62" width="1678" height="852" extended-state="0" />
+    <frame x="5" y="68" width="1678" height="852" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16503668" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -371,7 +393,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49936548" visible="true" weight="0.38026315" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49936548" visible="true" weight="0.36710528" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5006345" side_tool="true" weight="0.6723684" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -390,13 +412,6 @@
     <SUITE FILE_PATH="coverage/wblog@rails.rcov" NAME="rails Coverage Results" MODIFIED="1569615734716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" MODULE_NAME="wblog" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/post.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-504">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/posts/_form.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -593,13 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -613,16 +621,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/uicorn.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/unicorn1.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="21" lean-forward="true" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/uicorn.rb" />
+    <entry file="file://$PROJECT_DIR$/config/unicorn1.rb" />
     <entry file="file://$PROJECT_DIR$/commit.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -656,15 +656,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+        <state relative-caret-position="256">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.5.0/gems/mina-1.2.3/lib/mina/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="342">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
