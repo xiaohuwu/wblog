@@ -35,7 +35,7 @@ check_client_connection false
 
 before_fork do |server, worker|
   defined?(ActiveRecord::Base) and
-    ActiveRecord::Base.connection.disconnect!
+      ActiveRecord::Base.connection.disconnect!
 
   old_pid = "#{APP_HOME}/tmp/pids/unicorn.pid.oldbin"
   if File.exists?(old_pid) && server.pid != old_pid
@@ -50,5 +50,6 @@ end
 
 after_fork do |server, worker|
   defined?(ActiveRecord::Base) and
-    ActiveRecord::Base.establish_connection
+      ActiveRecord::Base.establish_connection
 end
+
