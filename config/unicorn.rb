@@ -1,5 +1,3 @@
-=begin
-
 module Rails
   class << self
     def root
@@ -8,11 +6,15 @@ module Rails
   end
 end
 
-APP_HOME = "/data/www/wblog/shared" #'/data/www/wblog/shared'  #Rails.root 第一次执行用它
-puts "APP_HOME123: #{APP_HOME}"
+APP_HOME = "#{Rails.root}/current" # "/data/www/wblog/shared" #'/data/www/wblog/shared'  #Rails.root 第一次执行用它
+puts "\n==================="
+puts "APP_HOME:#{APP_HOME}"
+puts "\n==================="
+
+
 worker_processes 2
 
-working_directory '/data/www/wblog/current' # available in 0.94.0+
+working_directory "#{APP_HOME}" # available in 0.94.0+
 
 if 'production' == ENV['RAILS_ENV']
   listen "#{APP_HOME}/tmp/sockets/unicorn.sock", :backlog => 64
@@ -37,7 +39,7 @@ check_client_connection false
 
 before_fork do |server, worker|
   defined?(ActiveRecord::Base) and
-    ActiveRecord::Base.connection.disconnect!
+      ActiveRecord::Base.connection.disconnect!
 
   old_pid = "#{APP_HOME}/tmp/pids/unicorn.pid.oldbin"
   if File.exists?(old_pid) && server.pid != old_pid
@@ -52,7 +54,7 @@ end
 
 after_fork do |server, worker|
   defined?(ActiveRecord::Base) and
-    ActiveRecord::Base.establish_connection
+      ActiveRecord::Base.establish_connection
 end
 
-=end
+
