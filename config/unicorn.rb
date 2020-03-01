@@ -6,15 +6,19 @@ module Rails
   end
 end
 
-APP_HOME = "/data/www/wblog/shared" #'/data/www/wblog/shared'  #Rails.root 第一次执行用它
-puts "APP_HOME123: #{APP_HOME}"
+APP_HOME = Rails.root
+
+puts "\n============================="
+puts "\nAPP_HOME123: #{APP_HOME}" # 项目的根目录 wblog
+puts "\n============================="
+
 worker_processes 2
 
-working_directory '/data/www/wblog/current' # available in 0.94.0+
+working_directory APP_HOME # available in 0.94.0+
 
 if 'production' == ENV['RAILS_ENV']
-  listen "#{APP_HOME}/tmp/sockets/unicorn.sock", :backlog => 64
-  pid "#{APP_HOME}/tmp/pids/unicorn.pid"
+  listen "/data/www/wblog/tmp/sockets/unicorn.sock", :backlog => 64
+  pid "/data/www/wblog/tmp/pids/unicorn.pid"
 else
   listen 3006, :tcp_nopush => true
   pid "#{APP_HOME}/tmp/pids/unicorn.pid"
@@ -40,7 +44,6 @@ before_fork do |server, worker|
   old_pid = "#{APP_HOME}/tmp/pids/unicorn.pid.oldbin"
   if File.exists?(old_pid) && server.pid != old_pid
     begin
-      puts "old_pid: #{old_pid}"
       Process.kill("QUIT", File.read(old_pid).to_i)
     rescue Errno::ENOENT, Errno::ESRCH
       puts "Send 'QUIT' signal to unicorn error!"
@@ -52,4 +55,3 @@ after_fork do |server, worker|
   defined?(ActiveRecord::Base) and
       ActiveRecord::Base.establish_connection
 end
-
